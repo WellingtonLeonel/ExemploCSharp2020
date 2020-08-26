@@ -12,13 +12,11 @@ namespace VendasConsole.Views
         public static void Renderizar()
         {
             Cliente c = new Cliente();
-            Console.WriteLine("------ Cadastrar cliente ------");
+            Console.WriteLine(" ---- CADASTRAR CLIENTE ---- \n");
             Console.WriteLine("Digite o nome do cliente:");
             c.Nome = Console.ReadLine();
-            Console.WriteLine("Digite o CPF do cliente:");
+            Console.WriteLine("Digite o cpf do cliente:");
             c.cpf = Console.ReadLine();
-            //Mensagem de sucesso
-            Console.WriteLine($"Cliente: {c.Nome} e CPF: {c.cpf}");
             if (Validacao.ValidarCpf(c.cpf))
             {
                 if (ClienteDAO.Cadastrar(c))
@@ -27,7 +25,7 @@ namespace VendasConsole.Views
                 }
                 else
                 {
-                    Console.WriteLine("Este cliente já existe!!!");
+                    Console.WriteLine("Esse cliente já existe!!!");
                 }
             }
             else

@@ -7,11 +7,11 @@ namespace VendasConsole.DAL
 {
     class ClienteDAO
     {
-       private static List<Cliente> clientes = new List<Cliente>();
+        private static List<Cliente> clientes = new List<Cliente>();
         public static List<Cliente> Listar() => clientes;
         public static bool Cadastrar(Cliente c)
         {
-            if(BuscarCliente(c.cpf) == null)
+            if (BuscarCliente(c.cpf) == null)
             {
                 clientes.Add(c);
                 return true;
@@ -24,10 +24,10 @@ namespace VendasConsole.DAL
             {
                 if (clienteCadastrado.cpf == cpf)
                 {
-                    return clienteCadastrado; 
+                    return clienteCadastrado;
                 }
             }
             return null;
-        }      
+        }
     }
 }

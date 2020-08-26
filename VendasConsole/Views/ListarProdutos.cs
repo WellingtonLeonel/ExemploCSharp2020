@@ -6,14 +6,14 @@ using VendasConsole.Models;
 
 namespace VendasConsole.Views
 {
-    class ListarClientes
+    class ListarProdutos
     {
         public static void Renderizar()
         {
-            Console.WriteLine(" ---- LISTAR CLIENTES ---- \n");
-            foreach (Cliente clienteCadastrado in ClienteDAO.Listar())
+            Console.WriteLine(" ----Listar Produtos ------ \n");
+            foreach (Produto produtoCadastrado in ProdutoDAO.Listar())
             {
-                Console.WriteLine(clienteCadastrado);
+                Console.WriteLine(produtoCadastrado);
             }
         }
     }
